@@ -1,1 +1,11 @@
-<p>missionlist works!</p>
+<h2>SpaceX Missions</h2>
+<button (click)="getSpacexData()">List All</button>
+<hr />
+<ul>
+  <li *ngFor="let mission of spacexData | async">
+    {{mission.mission_name}}<br>
+    {{mission.launch_year}}
+    {{mission.details}}
+    {{mission.mission_patch_small}}<br><br>
+  </li>
+</ul>
